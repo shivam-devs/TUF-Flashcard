@@ -18,7 +18,7 @@ const Modal = ({ setIsOpen }) => {
         return
     }
     setIsOpen(false)
-    axios.post("http://localhost:8080/api/question", payload).then((response) => {
+    axios.post("https://backend-96qf.onrender.com/api/question", payload).then((response) => {
         if(response.status===200){
             alert('Question Added !')
         }else{

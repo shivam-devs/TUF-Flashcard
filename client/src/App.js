@@ -9,7 +9,7 @@ function App() {
   const [idx, setIdx] = useState(0)
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
-    axios.get('http://localhost:8080/api/questions').then(({data})=>{
+    axios.get('https://backend-96qf.onrender.com/api/questions').then(({data})=>{
       setFlashcards(data.map((questionItem, index) => {
         const answer = decodeString(questionItem.correct_answer)
         const options = [
