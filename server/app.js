@@ -11,7 +11,7 @@ app.get("api/questions", async (req, res) => {
   res.send(notes)
 })
 
-app.post("/questions", async (req, res) => {
+app.post("api/question", async (req, res) => {
   const { type, difficulty, question, correct_answer, incorrect_answers } = req.body
   const note_id = await createQuestions(type, difficulty, question, correct_answer, incorrect_answers)
   res.status(200).send({'msg':'created !'})
